@@ -5,12 +5,17 @@ import { navbarItems } from "../../constants/navbarItems";
 import MenuModal from "./MenuModal";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
+import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [showModal, setShowModal] = useState(false);
+  const router = useRouter();
+
+  console.log(router.pathname);
 
   return (
-    <div className="fixed inset-x-0 mx-24 text-sm top-4 drop-shadow-lg sm:max-w-md sm:mx-auto rounded-2xl bg-neutral text-neutral-content">
+    <header className="fixed inset-x-0 z-50 mx-24 text-sm top-4 drop-shadow-lg sm:max-w-md sm:mx-auto rounded-[99px] md:rounded-3xl bg-neutral text-neutral-content">
       <div className="flex items-center justify-between">
         <div className="ml-0.5 btn btn-ghost">
           <Link href="/">
@@ -18,14 +23,20 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="flex items-center">
+        <div className="flex items-center justify-center">
           <ul className="hidden space-x-6 sm:flex">
             {navbarItems.map((item, id) => (
               <li
                 key={id}
-                className="hover:underline hover:text-primary underline-offset-8"
+                className="relative flex justify-center w-12 group hover:text-primary"
               >
                 <Link href={item.link}>{item.name}</Link>
+                {router.pathname === item.link && (
+                  <motion.div
+                    layoutId="underline"
+                    className="absolute w-12 h-[1px] rounded-full bg-neutral-content group-hover:bg-primary -bottom-1 inset-x-0"
+                  ></motion.div>
+                )}
               </li>
             ))}
           </ul>
@@ -33,7 +44,7 @@ const Navbar = () => {
 
         <div className="flex items-center">
           <ThemeIcon />
-          <div className="flex items-center justify-center w-12 h-12 m-1 rounded-xl sm:hidden hover:text-primary hover:bg-primary/20">
+          <div className="flex items-center justify-center w-12 h-12 m-1 rounded-3xl sm:hidden hover:text-primary hover:bg-primary/20">
             <Hamburger
               size={20}
               rounded
@@ -47,7 +58,7 @@ const Navbar = () => {
       <AnimatePresence>
         {showModal && <MenuModal setShowModal={setShowModal} />}
       </AnimatePresence>
-    </div>
+    </header>
   );
 };
 export default Navbar;

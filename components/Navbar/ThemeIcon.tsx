@@ -4,18 +4,26 @@ import { useTheme } from "next-themes";
 import useIsMounted from "../../hooks/useIsMounted";
 import { AnimatePresence, motion } from "framer-motion";
 import { themeIconVariants } from "../../constants/motionVariants";
+import { useEffect } from "react";
 
 const ThemeIcon = () => {
   const { theme, setTheme } = useTheme();
   const mounted = useIsMounted();
 
   const handleThemeChange = () => {
-    if (theme !== "darkTheme") {
-      setTheme("darkTheme");
+    if (theme !== "dark") {
+      setTheme("dark");
     } else {
-      setTheme("lightTheme");
+      setTheme("light");
     }
   };
+
+  useEffect(() => {
+    // Sets the theme variable for first time visitors
+    if (!localStorage.getItem("theme")) {
+      setTheme("light");
+    }
+  }, []);
 
   if (!mounted) {
     // Only render the UI when component is mounted
@@ -26,7 +34,7 @@ const ThemeIcon = () => {
   return (
     <div onClick={handleThemeChange} className="p-0 sm:p-3 btn btn-ghost">
       <AnimatePresence initial={false} mode="popLayout">
-        {theme !== "darkTheme" ? (
+        {theme !== "dark" ? (
           <motion.div
             key={theme}
             variants={themeIconVariants}

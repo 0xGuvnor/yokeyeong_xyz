@@ -27,7 +27,7 @@ const MenuModal = ({ setShowModal }: Props) => {
         exit="close"
         className="absolute inset-x-0 top-16 sm:hidden"
       >
-        <ul className="grid grid-cols-1 divide-y bg-neutral/90 divide-neutral-focus text-neutral-content rounded-2xl">
+        <ul className="grid grid-cols-1 divide-y bg-neutral divide-neutral-focus text-neutral-content rounded-2xl">
           {navbarItems.map((item, id) => (
             <Link
               key={id}
