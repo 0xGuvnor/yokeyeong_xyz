@@ -49,7 +49,7 @@ const Card = ({
         onClick={handleOpen}
         className={`${
           open
-            ? "fixed top-20 left-0 right-0 h-[92vh] w-[80vw] max-w-6xl mx-auto z-50 overflow-y-scroll shadow-2xl bg-primary"
+            ? "fixed top-20 left-0 right-0 h-[92vh] w-[80vw] max-w-6xl mx-auto z-40 overflow-y-scroll shadow-2xl bg-primary"
             : "relative h-[300px] w-[300px] md:h-[380px] md:w-[380px] cursor-pointer bg-transparent z-20"
         } p-6 hover:shadow-2xl`}
       >
