@@ -12,8 +12,6 @@ const Navbar = () => {
   const [showModal, setShowModal] = useState(false);
   const router = useRouter();
 
-  console.log(router.pathname);
-
   return (
     <header className="fixed inset-x-0 z-50 mx-24 text-sm top-4 drop-shadow-lg sm:max-w-md sm:mx-auto rounded-[99px] md:rounded-3xl bg-neutral text-neutral-content">
       <div className="flex items-center justify-between">
