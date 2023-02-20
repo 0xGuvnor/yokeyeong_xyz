@@ -7,8 +7,8 @@ interface Props {
 const TagList = ({ tags }: Props) => {
   return (
     <ul className="flex flex-wrap gap-1">
-      {tags.map((tag) => (
-        <Tag name={tag} />
+      {tags.map((tag, id) => (
+        <Tag key={id} name={tag} />
       ))}
     </ul>
   );
