@@ -1,5 +1,5 @@
 export interface ProjectData {
-  projectId: string;
+  id: string;
   title: string;
   tags: string[];
   pointOfInterest: number;

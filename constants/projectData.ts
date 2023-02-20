@@ -2,42 +2,42 @@ import { ProjectData } from "../typings";
 
 export const projectData: ProjectData[] = [
   {
-    projectId: "a",
+    id: "a",
     title: "Discord clone with chat functionality",
     tags: ["Nextjs", "Typescript", "Tailwindcss", "Firebase", "Redux Toolkit"],
     pointOfInterest: 80,
     backgroundColor: "#814A0E",
   },
   {
-    projectId: "b",
+    id: "b",
     title: "Discord clone with chat functionality",
     tags: ["Nextjs", "Typescript", "Tailwindcss", "Firebase", "Redux Toolkit"],
     pointOfInterest: 80,
     backgroundColor: "#814A0E",
   },
   {
-    projectId: "c",
+    id: "c",
     title: "Discord clone with chat functionality",
     tags: ["Nextjs", "Tailwindcss", "Firebase", "Typescript"],
     pointOfInterest: 80,
     backgroundColor: "#814A0E",
   },
   {
-    projectId: "d",
+    id: "d",
     title: "Discord clone with chat functionality",
     tags: ["Nextjs", "Tailwindcss", "Firebase", "Typescript"],
     pointOfInterest: 80,
     backgroundColor: "#814A0E",
   },
   {
-    projectId: "e",
+    id: "e",
     title: "Discord clone with chat functionality",
     tags: ["Nextjs", "Tailwindcss", "Firebase", "Typescript"],
     pointOfInterest: 80,
     backgroundColor: "#814A0E",
   },
   {
-    projectId: "f",
+    id: "f",
     title: "Discord clone with chat functionality",
     tags: ["Nextjs", "Tailwindcss", "Firebase", "Typescript"],
     pointOfInterest: 80,

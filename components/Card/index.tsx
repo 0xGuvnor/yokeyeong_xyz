@@ -9,20 +9,17 @@ import { AiOutlineClose } from "react-icons/ai";
 import CardImage from "./CardImage";
 
 interface Props extends ProjectData {
-  id: number;
   isSelected: boolean;
 }
 
 const Card = ({
   id,
   isSelected,
-  projectId,
   title,
   tags,
   pointOfInterest,
   backgroundColor,
 }: Props) => {
-  const router = useRouter();
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {

@@ -12,8 +12,7 @@ const CardList = () => {
         {projectData.map((project, id) => (
           <Card
             key={id}
-            id={id}
-            isSelected={router.query.projectId === project.projectId}
+            isSelected={router.query.projectId === project.id}
             {...project}
           />
         ))}
