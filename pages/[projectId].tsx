@@ -1,11 +1,4 @@
-import Navbar from "../components/Navbar";
-
 const ProjectId = () => {
-  return (
-    <div>
-      <Navbar />
-      ProjectId
-    </div>
-  );
+  return <div>ProjectId</div>;
 };
 export default ProjectId;

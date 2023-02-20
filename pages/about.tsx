@@ -1,12 +1,11 @@
-import Navbar from "../components/Navbar";
-import { LayoutGroup, motion, motionValue } from "framer-motion";
+import { LayoutGroup, motion } from "framer-motion";
 import { useState } from "react";
 import { projectData } from "../constants/projectData";
+import Layout from "../components/Layout";
 
 const About = () => {
   return (
-    <>
-      <Navbar />
+    <Layout title="About">
       <div className="flex flex-wrap items-center justify-center gap-2 mt-44 ">
         <LayoutGroup>
           {projectData.map((project, id) => (
@@ -14,7 +13,7 @@ const About = () => {
           ))}
         </LayoutGroup>
       </div>
-    </>
+    </Layout>
   );
 };
 export default About;
@@ -37,9 +36,9 @@ const ExpandingCard = () => {
         onClick={() => setOpen(!open)}
         className={`${
           open
-            ? "fixed top-20 z-50 w-[90vw] h-[500px] shadow-lg"
-            : "w-[300px] h-[300px]"
-        } p-4 bg-primary text-primary-content`}
+            ? "fixed top-20 z-50 w-[90vw] h-[500px] shadow-lg bg-secondary"
+            : "w-[450px] h-[450px] bg-primary"
+        } p-4 text-primary-content`}
       >
         <motion.h1 layout="position" className="font-black">
           Lorem ipsum dolor sit amet.

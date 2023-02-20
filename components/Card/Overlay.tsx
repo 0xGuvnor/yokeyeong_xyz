@@ -15,7 +15,7 @@ const Overlay = ({ open, setOpen }: Props) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0, transition: { duration: 0.5 } }}
           onClick={() => setOpen((prev) => !prev)}
-          className="fixed top-0 left-0 z-40 w-screen h-screen cursor-pointer bgg-black backdrop-blur-sm"
+          className="fixed top-0 left-0 z-40 w-screen h-screen cursor-pointer backdrop-blur-sm"
         ></motion.div>
       )}
     </AnimatePresence>

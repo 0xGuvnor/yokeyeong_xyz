@@ -54,3 +54,9 @@ export const themeIconVariants: Variants = {
     transition: { type: "spring", stiffness: 300, damping: 24 },
   },
 };
+
+export const layoutVariants: Variants = {
+  hidden: { opacity: 0, x: -200, y: 0 },
+  visible: { opacity: 1, x: 0, y: 0 },
+  exit: { opacity: 0, x: 0, y: -100 },
+};

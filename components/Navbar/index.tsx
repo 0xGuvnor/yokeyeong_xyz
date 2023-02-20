@@ -16,7 +16,7 @@ const Navbar = () => {
     <header className="fixed inset-x-0 z-50 mx-24 text-sm top-4 drop-shadow-lg sm:max-w-md sm:mx-auto rounded-[99px] md:rounded-3xl bg-neutral text-neutral-content">
       <div className="flex items-center justify-between">
         <div className="ml-0.5 btn btn-ghost">
-          <Link href="/">
+          <Link href="/" scroll={false}>
             <h1 className="text-base normal-case mono">yokeyeong</h1>
           </Link>
         </div>
@@ -26,14 +26,18 @@ const Navbar = () => {
             {navbarItems.map((item, id) => (
               <li
                 key={id}
-                className="relative flex justify-center w-12 group hover:text-primary"
+                className="flex flex-col space-y-0.5 group hover:text-primary"
               >
-                <Link href={item.link}>{item.name}</Link>
-                {router.pathname === item.link && (
+                <Link href={item.link} scroll={false}>
+                  {item.name}
+                </Link>
+                {router.pathname === item.link ? (
                   <motion.div
                     layoutId="underline"
-                    className="absolute w-12 h-[1px] rounded-full bg-neutral-content group-hover:bg-primary -bottom-1 inset-x-0"
+                    className="h-[1px] rounded-full bg-neutral-content group-hover:bg-primary"
                   ></motion.div>
+                ) : (
+                  <div className="h-[1px] rounded-full bg-neutral-content scale-0 group-hover:scale-100 origin-left transition ease-in-out duration-300 group-hover:bg-primary"></div>
                 )}
               </li>
             ))}

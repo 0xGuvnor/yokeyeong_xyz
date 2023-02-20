@@ -39,7 +39,7 @@ const Card = ({
 
       <motion.li
         layout
-        transition={{ layout: { duration: 0.75, type: "spring" } }}
+        transition={{ layout: { duration: 0.5, type: "spring" } }}
         style={{
           borderRadius: 26,
         }}
@@ -70,7 +70,7 @@ const Card = ({
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.1 }}
             className="md:text-xl mt-[269px] md:mt-[295px] text-primary-content bg-primary -ml-6 p-6 -mr-6 z-30"
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quos,
