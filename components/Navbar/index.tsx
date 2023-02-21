@@ -13,11 +13,11 @@ const Navbar = () => {
   const router = useRouter();
 
   return (
-    <header className="fixed inset-x-0 z-50 mx-24 text-sm top-4 drop-shadow-lg sm:max-w-md sm:mx-auto rounded-[99px] md:rounded-3xl bg-neutral text-neutral-content">
+    <header className="fixed inset-x-0 z-50 mx-24 text-sm top-4 drop-shadow-2xl sm:max-w-md sm:mx-auto rounded-[99px] md:rounded-3xl bg-neutral text-neutral-content">
       <div className="flex items-center justify-between">
         <div className="ml-0.5 btn btn-ghost">
           <Link href="/" scroll={false}>
-            <h1 className="text-base normal-case mono">yokeyeong</h1>
+            <h1 className="text-base normal-case mono">yy</h1>
           </Link>
         </div>
 

@@ -12,7 +12,7 @@ const CardImage = ({ open }: Props) => {
           src="/discord_banner.jpeg"
           alt="Discord Logo"
           fill
-          className="object-cover object-top transition duration-300 ease-in-out lg:object-center rounded-t-2xl md:rounded-t-3xl"
+          className="object-cover object-top lg:object-center rounded-t-2xl md:rounded-t-3xl"
         />
       </div>
     );

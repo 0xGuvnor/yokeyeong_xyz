@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import { ProjectData } from "../../typings";
 import TagList from "./TagList";
 import { motion } from "framer-motion";
@@ -7,20 +6,11 @@ import Overlay from "./Overlay";
 import CardPlaceholder from "./CardPlaceholder";
 import { AiOutlineClose } from "react-icons/ai";
 import CardImage from "./CardImage";
+import { useRouter } from "next/router";
 
-interface Props extends ProjectData {
-  isSelected: boolean;
-}
-
-const Card = ({
-  id,
-  isSelected,
-  title,
-  tags,
-  pointOfInterest,
-  backgroundColor,
-}: Props) => {
+const Card = ({ title, tags }: ProjectData) => {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
 
   const handleOpen = () => {
     if (!open) {
@@ -29,8 +19,14 @@ const Card = ({
   };
 
   useEffect(() => {
-    document.body.style.overflowY = open ? "hidden" : "auto";
-  }, [open]);
+    if (router.pathname === "/") {
+      // Disables background scrolling when the card is opened
+      document.body.style.overflow = open ? "hidden" : "auto";
+    } else {
+      // Enables body scrolling when user leaves the page with a card opened
+      document.body.style.overflow = "auto";
+    }
+  }, [open, router.pathname]);
 
   return (
     <>
@@ -39,14 +35,14 @@ const Card = ({
 
       <motion.li
         layout
-        transition={{ layout: { duration: 0.5, type: "spring" } }}
+        transition={{ layout: { duration: 0.4, type: "spring" } }}
         style={{
           borderRadius: 26,
         }}
         onClick={handleOpen}
         className={`${
           open
-            ? "fixed top-20 left-0 right-0 h-[92vh] w-[80vw] max-w-6xl mx-auto z-40 overflow-y-scroll shadow-2xl bg-primary"
+            ? "fixed top-20 left-0 right-0 h-[88vh] md:h-[92vh] w-[80vw] max-w-6xl mx-auto z-40 overflow-y-scroll shadow-2xl bg-gradient-to-b from-transparent to-primary"
             : "relative h-[300px] w-[300px] md:h-[380px] md:w-[380px] cursor-pointer bg-transparent z-20"
         } p-6 hover:shadow-2xl`}
       >
