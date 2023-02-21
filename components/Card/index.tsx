@@ -23,7 +23,7 @@ const Card = ({ title, tags }: ProjectData) => {
       // Disables background scrolling when the card is opened
       document.body.style.overflow = open ? "hidden" : "auto";
     } else {
-      // Enables body scrolling when user leaves the page with a card opened
+      // Enables body scrolling again when user leaves the page with a card opened
       document.body.style.overflow = "auto";
     }
   }, [open, router.pathname]);
