@@ -8,7 +8,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import CardImage from "./CardImage";
 import { useRouter } from "next/router";
 
-const Card = ({ title, tags }: ProjectData) => {
+const Card = ({ id, title, tags, image }: ProjectData) => {
   const [open, setOpen] = useState(false);
   const router = useRouter();
 
@@ -42,14 +42,14 @@ const Card = ({ title, tags }: ProjectData) => {
         onClick={handleOpen}
         className={`${
           open
-            ? "fixed top-20 left-0 right-0 h-[88vh] md:h-[92vh] w-[80vw] max-w-6xl mx-auto z-40 overflow-y-scroll shadow-2xl bg-gradient-to-b from-transparent to-primary"
-            : "relative h-[300px] w-[300px] md:h-[380px] md:w-[380px] cursor-pointer bg-transparent z-20"
+            ? "fixed top-20 left-0 right-0 h-[88vh] md:h-[92vh] w-[80vw] max-w-6xl mx-auto z-40 overflow-y-scroll shadow-2xl bg-gradient-to-b from-neutral to-base-300"
+            : "relative h-[300px] w-[300px] md:h-[380px] md:w-[380px] cursor-pointer bg-neutral sm:bg-neutral/70 hover:bg-neutral z-20"
         } p-6 hover:shadow-2xl`}
       >
-        <CardImage open={open} />
+        <CardImage open={open} image={image} alt={id} />
         <motion.div layout="position" className="flex flex-col space-y-2">
           <div className="flex items-center justify-between">
-            <h1 className="font-bold leading-5 text-white capitalize text-md md:leading-6 md:text-xl">
+            <h1 className="font-bold leading-5 text-white md:leading-6 md:text-xl">
               {title}
             </h1>
             <AiOutlineClose
@@ -67,7 +67,7 @@ const Card = ({ title, tags }: ProjectData) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.1 }}
-            className="md:text-xl mt-[269px] md:mt-[295px] text-primary-content bg-primary -ml-6 p-6 -mr-6 z-30"
+            className="md:text-xl mt-[269px] md:mt-[295px] bg-base-300 -ml-6 p-6 -mr-6 z-30"
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quos,
             provident velit perferendis labore corrupti animi vitae qui magni
