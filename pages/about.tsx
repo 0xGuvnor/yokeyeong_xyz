@@ -17,7 +17,19 @@ const About = () => {
           Berlin.
         </h3>
 
-        <p className="mt-10 font-light sm:text-xl">abc</p>
+        <p className="mt-10 font-light sm:text-xl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+          dolorum magni itaque quaerat eligendi, dolore assumenda voluptate
+          placeat iusto labore consectetur quos vitae sint modi reprehenderit
+          earum impedit quas doloribus vel. Aperiam, nostrum delectus rem eius
+          blanditiis deleniti molestias rerum aut quis ipsam ab corporis?
+          Reprehenderit, nemo! Ad quia aliquid at nisi accusamus consequatur
+          voluptatem culpa odit velit dolor. Explicabo ex quibusdam deserunt et.
+          Suscipit repellat dolores illum est. Ipsa, provident. Recusandae eum
+          inventore voluptate consectetur beatae magnam quidem eveniet illum,
+          rem sapiente ex id ad ipsum impedit veritatis. Enim eum dicta
+          excepturi laborum natus ipsam doloribus ea, in sequi?
+        </p>
       </div>
     </Layout>
   );
