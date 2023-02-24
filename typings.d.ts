@@ -3,6 +3,12 @@ export interface ProjectData {
   title: string;
   tags: string[];
   image: string;
-  sourceCode: string;
-  deployment: string;
+  description: string;
+  sourceCode:
+    | `https://github.com/0xGuvnor/${string}`
+    | {
+        frontend: `https://github.com/0xGuvnor/${string}`;
+        backend: `https://github.com/0xGuvnor/${string}`;
+      };
+  deployment: `https://${string}`;
 }

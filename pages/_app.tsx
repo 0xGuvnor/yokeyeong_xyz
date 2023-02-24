@@ -13,11 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThemeProvider>
       <Navbar />
 
-      <AnimatePresence
-        initial={false}
-        mode="wait"
-        onExitComplete={() => window.scrollTo(0, 0)}
-      >
+      <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
         <Component key={router.pathname} {...pageProps} />
       </AnimatePresence>
 
