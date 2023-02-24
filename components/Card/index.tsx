@@ -52,7 +52,7 @@ const Card = ({
         className={`${
           open
             ? "fixed top-[5.5rem] sm:top-20 left-0 right-0 max-h-[88vh] md:max-h-[92vh] w-[80vw] max-w-6xl mx-auto z-40 overflow-y-scroll shadow-2xl bg-base-300"
-            : "relative h-[300px] w-[300px] md:h-[380px] md:w-[380px] cursor-pointer bg-neutral sm:bg-neutral/70 hover:bg-neutral z-20"
+            : "relative h-[300px] w-[300px] md:h-[380px] md:w-[380px] cursor-pointer bg-neutral z-20 overflow-hidden"
         } p-4 sm:p-6 hover:shadow-2xl`}
       >
         <CardImage open={open} image={image} alt={id} />

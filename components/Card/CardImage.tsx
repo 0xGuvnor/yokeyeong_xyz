@@ -25,7 +25,7 @@ const CardImage = ({ open, image, alt }: Props) => {
         src={image}
         alt={alt}
         fill
-        className="object-cover object-center transition duration-300 ease-in-out rounded-2xl md:rounded-3xl sm:contrast-75 hover:contrast-100"
+        className="object-cover object-center transition duration-300 ease-in-out rounded-2xl md:rounded-3xl hover:scale-105"
       />
     </div>
   );
