@@ -22,18 +22,23 @@ const About = () => {
         <section className="mt-10">
           <h3 className="text-lg sm:text-2xl">About Me</h3>
           <p className="font-light sm:text-xl">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam
-            velit eius reprehenderit exercitationem est? Odit nulla quis dolorem
-            quibusdam autem itaque, voluptate fugit adipisci voluptatum, iusto
-            dolore numquam atque? Mollitia quae aliquam laborum facere
-            laudantium recusandae alias error accusamus? Facere, illo adipisci?
-            Ipsa optio id culpa, nisi, totam amet quod, vel reiciendis quae
-            maxime sed labore? Doloribus quasi nam quidem veritatis nulla
-            impedit, tenetur vitae eveniet facilis inventore a harum amet?
-            Suscipit inventore est quae itaque, velit sed maxime libero beatae
-            aspernatur unde culpa provident labore commodi adipisci voluptatem
-            animi et minima illum quam ratione doloribus ipsum, tempore maiores?
-            Commodi.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse unde
+            quibusdam illum, error officiis minus eaque magni accusantium iusto
+            provident consequatur quia, est in earum velit. At quis, voluptatum,
+            fugit eos esse repudiandae ipsum itaque nemo vero sunt consequuntur
+            recusandae iste culpa sequi veritatis distinctio amet eaque commodi
+            tempora deleniti? Et facere eius nesciunt ad voluptate, quos beatae
+            fugiat quasi ab quam unde quis qui ratione illo. Maxime nam magnam
+            error, amet officiis vero dolore fugiat reiciendis voluptate
+            accusantium dignissimos impedit expedita? Repellat perferendis sequi
+            dolorum quos minus, aliquam deserunt fugiat commodi fuga voluptatum
+            quia mollitia, atque error quo debitis itaque veritatis qui ipsum
+            dignissimos nesciunt ipsa dolores non dolorem ratione! Cumque
+            quibusdam quaerat minima voluptatem provident nobis tempora
+            accusamus, magni totam maiores iure, nemo enim, dolores ea nostrum
+            numquam quidem saepe ipsa error? Laborum quos amet, ducimus nisi
+            itaque cum odio, accusamus maiores at enim, veritatis veniam rem
+            dolorem?
           </p>
         </section>
 
