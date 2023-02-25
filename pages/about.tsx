@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Layout from "../components/Layout";
+import { aboutData } from "../constants/aboutData";
 
 const About = () => {
   return (
@@ -17,19 +19,70 @@ const About = () => {
           Berlin.
         </h3>
 
-        <p className="mt-10 font-light sm:text-xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-          dolorum magni itaque quaerat eligendi, dolore assumenda voluptate
-          placeat iusto labore consectetur quos vitae sint modi reprehenderit
-          earum impedit quas doloribus vel. Aperiam, nostrum delectus rem eius
-          blanditiis deleniti molestias rerum aut quis ipsam ab corporis?
-          Reprehenderit, nemo! Ad quia aliquid at nisi accusamus consequatur
-          voluptatem culpa odit velit dolor. Explicabo ex quibusdam deserunt et.
-          Suscipit repellat dolores illum est. Ipsa, provident. Recusandae eum
-          inventore voluptate consectetur beatae magnam quidem eveniet illum,
-          rem sapiente ex id ad ipsum impedit veritatis. Enim eum dicta
-          excepturi laborum natus ipsam doloribus ea, in sequi?
-        </p>
+        <section className="mt-10">
+          <h3 className="text-lg sm:text-2xl">About Me</h3>
+          <p className="font-light sm:text-xl">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam
+            velit eius reprehenderit exercitationem est? Odit nulla quis dolorem
+            quibusdam autem itaque, voluptate fugit adipisci voluptatum, iusto
+            dolore numquam atque? Mollitia quae aliquam laborum facere
+            laudantium recusandae alias error accusamus? Facere, illo adipisci?
+            Ipsa optio id culpa, nisi, totam amet quod, vel reiciendis quae
+            maxime sed labore? Doloribus quasi nam quidem veritatis nulla
+            impedit, tenetur vitae eveniet facilis inventore a harum amet?
+            Suscipit inventore est quae itaque, velit sed maxime libero beatae
+            aspernatur unde culpa provident labore commodi adipisci voluptatem
+            animi et minima illum quam ratione doloribus ipsum, tempore maiores?
+            Commodi.
+          </p>
+        </section>
+
+        <section className="mt-10">
+          <h3 className="text-lg sm:text-2xl">Preferred Technology Stack</h3>
+          <div className="flex flex-col space-y-4">
+            <div className="space-y-2">
+              <h4 className="font-light sm:text-xl">Languages</h4>
+              <div className="flex space-x-10 sm:space-x-20">
+                {aboutData.languages.map((language) => (
+                  <div className="flex flex-col items-center space-y-1">
+                    <div className="relative w-14 h-14 sm:w-16 sm:h-16">
+                      <Image
+                        src={language.image}
+                        alt={`${language.name} Logo`}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-sm font-light sm:text-base">
+                      {language.name}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <h4 className="font-light sm:text-xl">Frameworks</h4>
+              <div className="flex space-x-10 sm:space-x-20">
+                {aboutData.frameworks.map((framework) => (
+                  <div className="flex flex-col items-center space-y-1">
+                    <div className="relative w-14 h-14 sm:w-16 sm:h-16">
+                      <Image
+                        src={framework.image}
+                        alt={`${framework.name} Logo`}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <p className="text-sm font-light sm:text-base">
+                      {framework.name}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </Layout>
   );

@@ -1,3 +1,5 @@
+import { type } from "os";
+
 export interface ProjectData {
   id: string;
   title: string;
@@ -11,4 +13,14 @@ export interface ProjectData {
         backend: `https://github.com/0xGuvnor/${string}`;
       };
   deployment: `https://${string}`;
+}
+
+type TechStack = {
+  name: string;
+  image: string;
+};
+
+export interface AboutData {
+  languages: TechStack[];
+  frameworks: TechStack[];
 }
