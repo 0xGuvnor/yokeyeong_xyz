@@ -1,6 +1,5 @@
 import Layout from "../components/Layout";
-import TechStackItem from "../components/TechStackItem";
-import { aboutData } from "../constants/aboutData";
+import TechStackSection from "../components/TechStackSection";
 
 const About = () => {
   return (
@@ -45,32 +44,9 @@ const About = () => {
         <section className="mt-10">
           <h3 className="text-lg sm:text-2xl">Preferred Technology Stack</h3>
           <div className="flex flex-col space-y-5">
-            <div className="space-y-2">
-              <h4 className="sm:text-xl">Languages</h4>
-              <div className="flex space-x-14 sm:space-x-20">
-                {aboutData.languages.map((language) => (
-                  <TechStackItem techStack={language} />
-                ))}
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <h4 className="sm:text-xl">Frameworks</h4>
-              <div className="flex space-x-14 sm:space-x-20">
-                {aboutData.frameworks.map((framework) => (
-                  <TechStackItem techStack={framework} />
-                ))}
-              </div>
-            </div>
-
-            <div className="space-y-2">
-              <h4 className="sm:text-xl">Libraries</h4>
-              <div className="flex space-x-14 sm:space-x-20">
-                {aboutData.libraries.map((library) => (
-                  <TechStackItem techStack={library} />
-                ))}
-              </div>
-            </div>
+            <TechStackSection section="languages" />
+            <TechStackSection section="frameworks" />
+            <TechStackSection section="libraries" />
           </div>
         </section>
       </div>
