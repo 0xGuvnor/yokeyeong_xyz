@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Layout from "../components/Layout";
 import TechStackItem from "../components/TechStackItem";
 import { aboutData } from "../constants/aboutData";
