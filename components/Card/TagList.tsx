@@ -1,8 +1,9 @@
-import Tag from "./Tag";
+import { Tag } from "../../typings";
+import TagItem from "./TagItem";
 
 interface Props {
   open: boolean;
-  tags: string[];
+  tags: Tag[];
 }
 
 const TagList = ({ open, tags }: Props) => {
@@ -12,8 +13,8 @@ const TagList = ({ open, tags }: Props) => {
         open ? "top-7 sm:top-8" : "top-6 sm:top-7"
       }`}
     >
-      {tags.map((tag, id) => (
-        <Tag key={id} name={tag} />
+      {tags.map((tag) => (
+        <TagItem key={tag.name} tag={tag} />
       ))}
     </ul>
   );

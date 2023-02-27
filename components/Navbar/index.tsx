@@ -47,9 +47,9 @@ const Navbar = () => {
 
         <div className="flex items-center">
           <ThemeIcon />
-          <div className="flex items-center justify-center w-12 h-12 m-1 rounded-3xl sm:hidden hover:text-primary hover:bg-primary/20">
+          <div className="flex items-center justify-center w-12 h-12 m-0.5 rounded-3xl sm:hidden hover:text-primary hover:bg-primary/20">
             <Hamburger
-              size={20}
+              size={18}
               rounded
               toggled={showModal}
               toggle={setShowModal}

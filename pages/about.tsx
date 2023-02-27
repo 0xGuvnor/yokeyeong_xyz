@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Layout from "../components/Layout";
+import TechStackItem from "../components/TechStackItem";
 import { aboutData } from "../constants/aboutData";
 
 const About = () => {
@@ -44,45 +45,30 @@ const About = () => {
 
         <section className="mt-10">
           <h3 className="text-lg sm:text-2xl">Preferred Technology Stack</h3>
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-5">
             <div className="space-y-2">
-              <h4 className="font-light sm:text-xl">Languages</h4>
-              <div className="flex space-x-10 sm:space-x-20">
+              <h4 className="sm:text-xl">Languages</h4>
+              <div className="flex space-x-14 sm:space-x-20">
                 {aboutData.languages.map((language) => (
-                  <div className="flex flex-col items-center space-y-1">
-                    <div className="relative w-14 h-14 sm:w-16 sm:h-16">
-                      <Image
-                        src={language.image}
-                        alt={`${language.name} Logo`}
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
-                    <p className="text-sm font-light sm:text-base">
-                      {language.name}
-                    </p>
-                  </div>
+                  <TechStackItem techStack={language} />
                 ))}
               </div>
             </div>
 
             <div className="space-y-2">
-              <h4 className="font-light sm:text-xl">Frameworks</h4>
-              <div className="flex space-x-10 sm:space-x-20">
+              <h4 className="sm:text-xl">Frameworks</h4>
+              <div className="flex space-x-14 sm:space-x-20">
                 {aboutData.frameworks.map((framework) => (
-                  <div className="flex flex-col items-center space-y-1">
-                    <div className="relative w-14 h-14 sm:w-16 sm:h-16">
-                      <Image
-                        src={framework.image}
-                        alt={`${framework.name} Logo`}
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
-                    <p className="text-sm font-light sm:text-base">
-                      {framework.name}
-                    </p>
-                  </div>
+                  <TechStackItem techStack={framework} />
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <h4 className="sm:text-xl">Libraries</h4>
+              <div className="flex space-x-14 sm:space-x-20">
+                {aboutData.libraries.map((library) => (
+                  <TechStackItem techStack={library} />
                 ))}
               </div>
             </div>

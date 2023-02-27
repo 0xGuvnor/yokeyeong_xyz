@@ -1,9 +1,11 @@
 import { type } from "os";
 
+type Tag = { name: string; link: `https://${string}` };
+
 export interface ProjectData {
   id: string;
   title: string;
-  tags: string[];
+  tags: Tag[];
   image: string;
   description: string;
   sourceCode:
@@ -18,9 +20,11 @@ export interface ProjectData {
 type TechStack = {
   name: string;
   image: string;
+  link: `https://${string}`;
 };
 
 export interface AboutData {
   languages: TechStack[];
   frameworks: TechStack[];
+  libraries: TechStack[];
 }
