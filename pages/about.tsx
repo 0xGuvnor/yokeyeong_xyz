@@ -20,7 +20,7 @@ const About = () => {
 
         <section className="mt-10">
           <h3 className="text-lg sm:text-2xl">About Me</h3>
-          <p className="font-light sm:text-xl">
+          <p className="font-light text-justify sm:text-xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse unde
             quibusdam illum, error officiis minus eaque magni accusantium iusto
             provident consequatur quia, est in earum velit. At quis, voluptatum,
