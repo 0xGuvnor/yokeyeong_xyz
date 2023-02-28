@@ -1,3 +1,5 @@
+import { FaCloudDownloadAlt } from "react-icons/fa";
+import { MdDomainDisabled } from "react-icons/md";
 import { ProjectData } from "../typings";
 
 export const projectData: ProjectData[] = [
@@ -31,9 +33,11 @@ export const projectData: ProjectData[] = [
       { name: "UniswapV3", link: "https://app.uniswap.org/#/swap" },
     ],
     image: "/aave_banner.jpg",
-    description: `hello
-              da
-    world`,
+    description: `jdawd
+    dad
+              jdawdaa
+                            mfmopada
+              dawda`,
     sourceCode: {
       frontend: "https://github.com/0xGuvnor/Liquidatooor_client",
       backend: "https://github.com/0xGuvnor/liquidatooor_hardhat",
