@@ -6,15 +6,12 @@ import {
   modalItemVariants,
   modalVariants,
 } from "../../constants/motionVariants";
-import { useRouter } from "next/router";
 
 interface Props {
   setShowModal: Dispatch<SetStateAction<boolean>>;
 }
 
 const MenuModal = ({ setShowModal }: Props) => {
-  const router = useRouter();
-
   return (
     <>
       {/* Overlay to close the modal when the backdrop is clicked */}
