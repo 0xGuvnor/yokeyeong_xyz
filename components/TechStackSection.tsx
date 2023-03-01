@@ -11,8 +11,8 @@ const TechStackSection = ({ section }: Props) => {
     <div className="space-y-2">
       <h4 className="capitalize sm:text-xl">{section}</h4>
       <div className="flex space-x-14 sm:space-x-20">
-        {aboutData[section].map((data) => (
-          <TechStackItem techStack={data} />
+        {aboutData[section].map((data, id) => (
+          <TechStackItem key={id} techStack={data} />
         ))}
       </div>
     </div>

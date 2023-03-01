@@ -20,24 +20,14 @@ const About = () => {
 
         <section className="mt-10">
           <h3 className="text-lg sm:text-2xl">About Me</h3>
-          <p className="font-light text-justify sm:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse unde
-            quibusdam illum, error officiis minus eaque magni accusantium iusto
-            provident consequatur quia, est in earum velit. At quis, voluptatum,
-            fugit eos esse repudiandae ipsum itaque nemo vero sunt consequuntur
-            recusandae iste culpa sequi veritatis distinctio amet eaque commodi
-            tempora deleniti? Et facere eius nesciunt ad voluptate, quos beatae
-            fugiat quasi ab quam unde quis qui ratione illo. Maxime nam magnam
-            error, amet officiis vero dolore fugiat reiciendis voluptate
-            accusantium dignissimos impedit expedita? Repellat perferendis sequi
-            dolorum quos minus, aliquam deserunt fugiat commodi fuga voluptatum
-            quia mollitia, atque error quo debitis itaque veritatis qui ipsum
-            dignissimos nesciunt ipsa dolores non dolorem ratione! Cumque
-            quibusdam quaerat minima voluptatem provident nobis tempora
-            accusamus, magni totam maiores iure, nemo enim, dolores ea nostrum
-            numquam quidem saepe ipsa error? Laborum quos amet, ducimus nisi
-            itaque cum odio, accusamus maiores at enim, veritatis veniam rem
-            dolorem?
+          <p className="font-light text-justify whitespace-pre-line sm:text-xl">
+            {`I have a strong passion for building decentralized applications and exploring the potential of blockchain technology. Previously, I was a certified Salesforce and PowerBI consultant, where I gained extensive experience working with multinational companies across various industries, ranging from food delivery platforms to mining.
+
+            I hold a Bachelor of Commerce degree (majoring in Economics and Finance) from the University of Melbourne and a Master's in Business Analytics from Melbourne Business School, which has provided me with a solid foundation in finance and data analysis. Throughout my academic and professional journey, I have always been passionate about exploring new technologies and their potential applications in various industries.
+
+            In recent years, I was introduced to the world of cryptocurrency and more specifically, decentralised finance. This spurred me to take on a new challenge and self-teach myself web development, subsequently focusing on Web3. With an unwavering determination to succeed, I have been constantly strengthening my technical foundation and expanding my knowledge and skills in this area. I have been working on various projects, including building decentralized applications, building functional clones of popular websites, and exploring blockchain protocols.
+            
+            If you are looking for a dedicated and self-motivated developer who can bring a unique perspective to your team, I am your ideal candidate. Don't hesitate to reach out and let's chat about how I can contribute to your team's success.`}
           </p>
         </section>
 

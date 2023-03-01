@@ -1,5 +1,3 @@
-import { FaCloudDownloadAlt } from "react-icons/fa";
-import { MdDomainDisabled } from "react-icons/md";
 import { ProjectData } from "../typings";
 
 export const projectData: ProjectData[] = [
