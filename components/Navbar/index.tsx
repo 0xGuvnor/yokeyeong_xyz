@@ -27,7 +27,7 @@ const Navbar = () => {
             <motion.h1
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
               className="text-base normal-case mono sm:hidden"
             >
               yokeyeong
