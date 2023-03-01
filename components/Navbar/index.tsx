@@ -7,13 +7,20 @@ import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 
 const Navbar = () => {
   const [showModal, setShowModal] = useState(false);
   const router = useRouter();
+  const isMobile = useMediaQuery({ maxWidth: "640px" });
 
   return (
-    <header className="fixed inset-x-0 z-50 mx-24 text-sm top-4 drop-shadow-2xl sm:max-w-sm sm:mx-auto rounded-[99px] md:rounded-3xl bg-neutral text-neutral-content">
+    <motion.header
+      initial={{ width: isMobile ? "30%" : "10%" }}
+      animate={{ width: "100%" }}
+      transition={{ duration: 2 }}
+      className="fixed inset-x-0 z-50 max-w-xs text-sm top-4 drop-shadow-2xl sm:max-w-sm mx-auto rounded-[99px] md:rounded-3xl bg-neutral text-neutral-content"
+    >
       <div className="flex items-center justify-between">
         <div className="ml-0.5 btn btn-ghost">
           <Link href="/" scroll={false}>
@@ -22,7 +29,12 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="flex items-center justify-center">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, type: "tween", delay: 0.4 }}
+          className="flex items-center justify-center"
+        >
           <ul className="hidden space-x-6 sm:flex">
             {navbarItems.map((item, id) => (
               <li
@@ -43,9 +55,14 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </motion.div>
 
-        <div className="flex items-center">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, type: "tween", delay: 0.4 }}
+          className="flex items-center"
+        >
           <ThemeIcon />
           <div className="flex items-center justify-center w-12 h-12 m-0.5 rounded-3xl sm:hidden hover:text-primary hover:bg-primary/20">
             <Hamburger
@@ -55,13 +72,13 @@ const Navbar = () => {
               toggle={setShowModal}
             />
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <AnimatePresence>
         {showModal && <MenuModal setShowModal={setShowModal} />}
       </AnimatePresence>
-    </header>
+    </motion.header>
   );
 };
 export default Navbar;
