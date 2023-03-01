@@ -7,16 +7,14 @@ import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
-import { useMediaQuery } from "react-responsive";
 
 const Navbar = () => {
   const [showModal, setShowModal] = useState(false);
   const router = useRouter();
-  const isMobile = useMediaQuery({ maxWidth: "640px" });
 
   return (
     <motion.header
-      initial={{ width: isMobile ? "30%" : "10%" }}
+      initial={{ width: "10%" }}
       animate={{ width: "100%" }}
       transition={{ duration: 2 }}
       className="fixed inset-x-0 z-50 max-w-[16rem] text-sm top-4 drop-shadow-2xl sm:max-w-sm mx-auto rounded-[99px] md:rounded-3xl bg-neutral text-neutral-content"
@@ -27,7 +25,7 @@ const Navbar = () => {
             <motion.h1
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 1, delay: 1 }}
               className="text-base normal-case mono sm:hidden"
             >
               yokeyeong

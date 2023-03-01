@@ -19,7 +19,7 @@ const Layout: FC<PropsWithChildren<{ title: string }>> = ({
         initial="hidden"
         animate="visible"
         exit="exit"
-        transition={{ type: "tween", ease: "easeInOut", duration: 0.2 }}
+        transition={{ type: "tween", ease: "easeInOut", duration: 0.3 }}
       >
         {children}
       </motion.div>
