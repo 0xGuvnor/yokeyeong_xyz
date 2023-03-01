@@ -19,7 +19,7 @@ const Navbar = () => {
       initial={{ width: isMobile ? "30%" : "10%" }}
       animate={{ width: "100%" }}
       transition={{ duration: 2 }}
-      className="fixed inset-x-0 z-50 max-w-xs text-sm top-4 drop-shadow-2xl sm:max-w-sm mx-auto rounded-[99px] md:rounded-3xl bg-neutral text-neutral-content"
+      className="fixed inset-x-0 z-50 max-w-[16rem] text-sm top-4 drop-shadow-2xl sm:max-w-sm mx-auto rounded-[99px] md:rounded-3xl bg-neutral text-neutral-content"
     >
       <div className="flex items-center justify-between">
         <div className="ml-0.5 btn btn-ghost">
@@ -39,7 +39,7 @@ const Navbar = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, type: "tween", delay: 0.4 }}
+          transition={{ duration: 1, type: "tween", delay: 1 }}
           className="flex items-center justify-center"
         >
           <ul className="hidden space-x-6 sm:flex">
@@ -67,7 +67,7 @@ const Navbar = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, type: "tween", delay: 0.4 }}
+          transition={{ duration: 1, type: "tween", delay: 1 }}
           className="flex items-center"
         >
           <ThemeIcon />
