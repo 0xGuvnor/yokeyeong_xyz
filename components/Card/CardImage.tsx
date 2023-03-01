@@ -7,19 +7,16 @@ interface Props {
 }
 
 const CardImage = ({ open, image, alt }: Props) => {
-  if (open) {
-    return (
-      <div className="absolute top-0 left-0 w-full h-96 -z-10">
-        <Image
-          src={image}
-          alt={alt}
-          fill
-          className="object-cover object-top lg:object-center rounded-t-2xl md:rounded-t-3xl"
-        />
-      </div>
-    );
-  }
-  return (
+  return open ? (
+    <div className="absolute top-0 left-0 w-full h-96 -z-10">
+      <Image
+        src={image}
+        alt={alt}
+        fill
+        className="object-cover object-top lg:object-center rounded-t-2xl md:rounded-t-3xl"
+      />
+    </div>
+  ) : (
     <div className="absolute top-0 left-0 w-full h-full -z-10">
       <Image
         src={image}
