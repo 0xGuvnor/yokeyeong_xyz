@@ -7,14 +7,16 @@ import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 
 const Navbar = () => {
   const [showModal, setShowModal] = useState(false);
   const router = useRouter();
+  const isMobile = useMediaQuery({ maxWidth: 640 });
 
   return (
     <motion.header
-      initial={{ width: "10%" }}
+      initial={{ width: isMobile ? "10%" : "5%" }}
       animate={{ width: "100%" }}
       transition={{ duration: 2 }}
       className="fixed inset-x-0 z-50 max-w-[16rem] text-sm top-4 drop-shadow-2xl sm:max-w-sm mx-auto rounded-[99px] md:rounded-3xl bg-neutral text-neutral-content"
@@ -37,7 +39,7 @@ const Navbar = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, type: "tween", delay: 1 }}
+          transition={{ duration: 1, delay: 1 }}
           className="flex items-center justify-center"
         >
           <ul className="hidden space-x-6 sm:flex">
@@ -65,7 +67,7 @@ const Navbar = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, type: "tween", delay: 1 }}
+          transition={{ duration: 1, delay: 1 }}
           className="flex items-center"
         >
           <ThemeIcon />
