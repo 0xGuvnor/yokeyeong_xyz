@@ -12,7 +12,9 @@ export const projectData: ProjectData[] = [
       { name: "ReduxToolkit", link: "https://redux-toolkit.js.org/" },
     ],
     image: "/discord_banner.jpeg",
-    description: "",
+    description: `A Discord clone built with Next.js and powered by Firebase. This app allows authenticated users to create and chat in channels in real-time.
+
+On the landing page, users would log in using their Google account (located on the top right corner), afterwhich they would be redirected to the familiar Discord chat interface where messages are sent in real-time. Users are also able to delete their own messages.`,
     sourceCode: "https://github.com/0xGuvnor/discord-demo",
     deployment: "https://discord-demo.vercel.app/",
   },
@@ -31,11 +33,13 @@ export const projectData: ProjectData[] = [
       { name: "UniswapV3", link: "https://app.uniswap.org/#/swap" },
     ],
     image: "/aave_banner.jpg",
-    description: `jdawd
-    dad
-              jdawdaa
-                            mfmopada
-              dawda`,
+    description: `This dApp, Liquidatooor, allows users to liquidate Aave V3 loans that have a health factor below 1. This dApp is currently only deployed on the Avalanche and Polygon testnets.
+    
+Simply connect your wallet and enter the address of the account you wish to liquidate to check if it is eligible for liquidation, and it will show the account's supplied and borrowed positions. If an account is eligible for liquidation, the user will then choose which of the account's borrowed assets (if there are more than one) they wish to liquidate, and which of the account's supplied asset they would like to recieve in return. Lastly, the user would then need to click on the "liquidation" button to bring up the transaction confirmation window to complete the liquidation process.
+
+Under the hood, the liquidation is done using flash loans from Aave, which means the user does not need any initial capital outlay (just enough to pay for the gas needed to complete the transaction). If the transaction is profitable, the profits will be automatically sent to the user's wallet, otherwise it will fail.
+
+One thing to note is that as this is a generalised liquidation contract, token swaps from the collateral asset to the borrowed asset are done through a single Uniswap V3 pool, i.e. no multihops to determine the most optimal route. Therefore, it is advised that the user should check if there is sufficient liquidity in a Uniswap V3 liquidity pool to initiate the swap.`,
     sourceCode: {
       frontend: "https://github.com/0xGuvnor/Liquidatooor_client",
       backend: "https://github.com/0xGuvnor/liquidatooor_hardhat",
@@ -53,7 +57,8 @@ export const projectData: ProjectData[] = [
       { name: "Stripe", link: "https://stripe.com/" },
     ],
     image: "/netflix_banner.webp",
-    description: "",
+    description:
+      "A Netflix clone built with Next.js and integrated with Firebase for storing user credentials and Stripe for payments processing.",
     sourceCode: "https://github.com/0xGuvnor/netflix-clone",
     deployment: "https://neckfleeks.vercel.app/",
   },

@@ -14,34 +14,31 @@ interface Props {
 const SourceCodeLink = ({ sourceCode }: Props) => {
   const [open, setOpen] = useState(false);
 
-  if (typeof sourceCode === "string") {
-    return (
-      <div className="flex flex-col group">
-        <a
-          href={sourceCode}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group-hover:text-primary"
-        >
-          Source Code
-        </a>
-        <div className="h-[1.5px] bg-base-content scale-0 group-hover:bg-primary group-hover:scale-100 origin-left transition duration-500 ease-in-out rounded-full"></div>
-      </div>
-    );
-  }
-  return (
+  return typeof sourceCode === "string" ? (
+    <div className="flex flex-col group">
+      <a
+        href={sourceCode}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-primary"
+      >
+        Source Code
+      </a>
+      <div className="h-[1.5px] bg-base-content scale-0 group-hover:bg-primary group-hover:scale-100 origin-left transition duration-500 ease-in-out rounded-full"></div>
+    </div>
+  ) : (
     <div
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
       className="relative"
     >
       <div className="flex items-center cursor-pointer">
-        <p className="mr-1">Source Code</p>
+        <p className="mr-1 text-primary">Source Code</p>
         <motion.div
           animate={{ rotateX: open ? 180 : 0 }}
           transition={{ duration: 0.4 }}
         >
-          <IoIosArrowUp className="w-4 h-4" />
+          <IoIosArrowUp className="w-4 h-4 text-primary" />
         </motion.div>
       </div>
 
@@ -51,14 +48,14 @@ const SourceCodeLink = ({ sourceCode }: Props) => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
-            className="absolute -left-1.5 sm:-left-2.5 top-6 sm:top-7 grid grid-cols-2 divide-x divide-base-content w-36 sm:w-44"
+            className="absolute -left-1.5 sm:-left-2.5 top-6 sm:top-7 grid grid-cols-2 divide-x divide-secondary w-36 sm:w-44"
           >
             <div className="flex flex-col group">
               <a
                 href={sourceCode.frontend}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="self-center group-hover:text-primary"
+                className="self-center text-primary"
               >
                 Frontend
               </a>
@@ -70,7 +67,7 @@ const SourceCodeLink = ({ sourceCode }: Props) => {
                 href={sourceCode.backend}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="self-center group-hover:text-primary"
+                className="self-center text-primary"
               >
                 Backend
               </a>

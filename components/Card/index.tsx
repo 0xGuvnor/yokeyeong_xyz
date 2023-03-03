@@ -79,9 +79,9 @@ const Card = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="sm:text-lg mt-[350px] sm:mt-[340px] bg-base-300 h-full z-30 mb-8 sm:mb-6 space-y-8"
+            className="sm:text-lg mt-[350px] bg-base-300 h-full z-30 mb-8 sm:mb-6 space-y-4"
           >
-            <p className="whitespace-pre">{description}</p>
+            <p className="whitespace-pre-wrap">{description}</p>
             <div className="flex space-x-10 font-bold">
               <SourceCodeLink sourceCode={sourceCode} />
 
@@ -90,7 +90,7 @@ const Card = ({
                   href={deployment}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group-hover:text-primary"
+                  className="text-primary"
                 >
                   Deployment
                 </a>
