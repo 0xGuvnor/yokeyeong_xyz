@@ -57,8 +57,15 @@ One thing to note is that as this is a generalised liquidation contract, token s
       { name: "Stripe", link: "https://stripe.com/" },
     ],
     image: "/netflix_banner.webp",
-    description:
-      "A Netflix clone built with Next.js and integrated with Firebase for storing user credentials and Stripe for payments processing.",
+    description: `A Netflix clone built with Next.js and integrated with Firebase for storing user credentials and Stripe for simulating payment processing.
+    
+Users can create an account by entering any email address and password and clicking the "Sign up now" button. This will then redirect them to a page to choose a subscription tier, followed by a dummy Stripe payment page where they can use a testing credit card number of "4242 4242 4242 4242" to successfully subscribe.
+
+To skip this step, simply login with the username "dev@netflix.com" and password "123456" to reach the familiar Netflix home page. Movies are populated with data from TMDB, so the data is constantly updated. 
+
+Users can click on a movie/show's card to bring up a modal to watch its trailer (if available), along with displaying other relevant details. They can also add it to their personal saved list by clicking on the "+" icon.
+
+To access their account's settings, users can click on the profile icon on the top right of the page to perform functions such as cancelling their subscription or to sign out.`,
     sourceCode: "https://github.com/0xGuvnor/netflix-clone",
     deployment: "https://neckfleeks.vercel.app/",
   },
