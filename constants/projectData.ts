@@ -74,13 +74,21 @@ To access their account's settings, users can click on the profile icon on the t
     title: "Alternate Apple Clone",
     tags: [
       { name: "Nextjs", link: "https://nextjs.org/" },
-      { name: "Tailwindcss", link: "https://tailwindcss.com/" },
-      { name: "Firebase", link: "https://firebase.google.com/" },
       { name: "Typescript", link: "https://www.typescriptlang.org/" },
+      { name: "Tailwindcss", link: "https://tailwindcss.com/" },
+      { name: "Sanity", link: "https://www.sanity.io/" },
+      { name: "NextAuth", link: "https://next-auth.js.org" },
+      { name: "ReduxToolkit", link: "https://redux-toolkit.js.org/" },
       { name: "Stripe", link: "https://stripe.com/" },
     ],
     image: "/apple_banner.png",
-    description: ``,
+    description: `An Apple clone with an alternate design built with Next.js, Content Management System (CMS) powered by Sanity.io, NextAuth for user authentication, and Stripe for payments checkout.
+    
+Users can log in using their Google account by clicking on the user icon on the top right corner. 
+
+To add products to their shopping cart, simply click on the shopping bag icon on a product card, and you can enter the checkout page by clicking on the floating action button that appears on the bottom right corner of the screen or shopping bag icon on the header.
+
+To complete your order, click "Check Out" button and you'll be redirected to Stripe's checkout page. Use Stripe's test credit card number "4242 4242 4242" to complete your order. If you signed in with your Google account earlier, your first name will be displayed on the order success page.`,
     sourceCode: "https://github.com/0xGuvnor/apple-alt-clone",
     deployment: "https://apple-alt-clone.vercel.app/",
   },
