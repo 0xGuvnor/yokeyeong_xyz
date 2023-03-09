@@ -88,7 +88,7 @@ Users can log in using their Google account by clicking on the user icon on the 
 
 To add products to their shopping cart, simply click on the shopping bag icon on a product card, and you can enter the checkout page by clicking on the floating action button that appears on the bottom right corner of the screen or shopping bag icon on the header.
 
-To complete your order, click "Check Out" button and you'll be redirected to Stripe's checkout page. Use Stripe's test credit card number "4242 4242 4242" to complete your order. If you signed in with your Google account earlier, your first name will be displayed on the order success page.`,
+To complete your order, click "Check Out" button and you'll be redirected to Stripe's checkout page. Use Stripe's test credit card number "4242 4242 4242" to complete your order. If you've signed in with your Google account earlier, your first name will be displayed on the successful order page.`,
     sourceCode: "https://github.com/0xGuvnor/apple-alt-clone",
     deployment: "https://apple-alt-clone.vercel.app/",
   },
