@@ -37,6 +37,16 @@ const Card = ({
     }
   }, [open, router.pathname]);
 
+  // Set up an event listener to close the card when Esc key is pressed
+  useEffect(() => {
+    const closeCard = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", closeCard);
+
+    return () => window.removeEventListener("keydown", closeCard);
+  }, []);
+
   return (
     <>
       <Overlay open={open} setOpen={setOpen} />

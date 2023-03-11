@@ -106,9 +106,9 @@ To complete your order, click "Check Out" button and you'll be redirected to Str
       { name: "The Graph", link: "https://thegraph.com/" },
     ],
     image: "/pokemon_banner.jpg",
-    description: `One of my first personal projects, this is a full-stack dApp to mint Pokémon NFTs. Users are able to mint a random Pokémon from any of the first 5 Pokémon generations. The randomness used to select a Pokémon for each NFT is powered by Chainlink Verifiable Randomness Function (VRF) to ensure true non-deterministic randomness, while Pokémon data is provided by the Pokémon API and stored on IPFS through Pinata.
+    description: `One of my first personal projects, this is a full-stack dApp to mint Pokémon NFTs on the Ethereum Goerli testnet. Users are able to mint a random Pokémon from any of the first 5 Pokémon generations, viewable on OpenSea. The randomness used to select a Pokémon for each NFT is powered by Chainlink's Verifiable Randomness Function (VRF) to ensure true non-deterministic randomness, while Pokémon data is provided by the Pokémon API and stored on IPFS through Pinata. Inital mints will display a gif of a hatching Pokémon egg, and will only be revealed after the deployer of the contract runs a script to attach the relevant Pokémon data to the NFT, based on the Pokémon ID provided by the VRF.
     
-Additionally, administrative functions of the NFT contract are locked behind a multi-signature (multisig) contract, accessable through the "Admin" tab in the header.`,
+Additionally, administrative functions of the NFT contract are gated behind a multi-signature (multisig) contract, accessable through the "Admin" tab in the header. Admins can submit transactions to call predefined functions such as pausing/unpausing minting or granting user access roles to other addresses. Once the transaction has been submitted, it has to reach a predetermined number of comfirmations by other addresses in the multisig, e.g. a multisig with 3 addresses may require 2 confirmations, for it to be eligible to be executed.`,
     sourceCode: {
       frontend: "https://github.com/0xGuvnor/nft-minter-pokemon-frontend",
       backend: "https://github.com/0xGuvnor/nft-minter-pokemon",
