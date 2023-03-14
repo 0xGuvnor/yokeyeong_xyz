@@ -14,7 +14,7 @@ export const projectData: ProjectData[] = [
     image: "/discord_banner.jpeg",
     description: `A Discord clone built with Next.js and powered by Firebase. This app allows authenticated users to create and chat in channels in real-time.
 
-On the landing page, users would log in using their Google account (located on the top right corner), afterwhich they would be redirected to the familiar Discord chat interface where messages are sent in real-time. Users are also able to delete their own messages.`,
+On the landing page, users would log in using their Google account (located on the top right corner), afterwhich they would be redirected to the familiar Discord chat interface where messages are sent in real-time. Simply choose an existing Channel to chat in, or create a new one that suits your needs. Users are also able to delete their own messages by hovering over their message to reveal the Trash Bin icon.`,
     sourceCode: "https://github.com/0xGuvnor/discord-demo",
     deployment: "https://discord-demo.vercel.app/",
   },
@@ -57,7 +57,7 @@ One thing to note is that as this is a generalised liquidation contract, token s
       { name: "Stripe", link: "https://stripe.com/" },
     ],
     image: "/netflix_banner.webp",
-    description: `A Netflix clone built with Next.js and integrated with Firebase for storing user credentials and Stripe for simulating payment processing.
+    description: `A Netflix clone built with Next.js and integrated with Firebase for storing user credentials and Stripe for simulating payment processing. Using Server Side Rendering for loading movie data, users will have a better experience as the content will already be available the moment the page loads.
     
 Users can create an account by entering any email address and password and clicking the "Sign up now" button. This will then redirect them to a page to choose a subscription tier, followed by a dummy Stripe payment page where they can use a testing credit card number of "4242 4242 4242 4242" to successfully subscribe.
 
@@ -125,7 +125,9 @@ Additionally, administrative functions of the NFT contract are gated behind a mu
       { name: "SWR", link: "https://swr.vercel.app/" },
     ],
     image: "/reddit_banner.jpg",
-    description: ``,
+    description: `A Reddit clone, built with Next.js and powered by Supabase with its database and user authentication features. 
+    
+This app allows users to create posts and authenticated users are able to comment on their posts.`,
     sourceCode: "https://github.com/0xGuvnor/reddit-UI-clone",
     deployment: "https://reddit-ui-clone.vercel.app/",
   },
@@ -139,7 +141,7 @@ Additionally, administrative functions of the NFT contract are gated behind a mu
       { name: "Framer Motion", link: "https://www.framer.com/motion/" },
     ],
     image: "/fintech_banner.png",
-    description: ``,
+    description: `A fully responsive modern website of a fictional fintech startup, complete with animations and high-quality custom assets.`,
     sourceCode: "https://github.com/0xGuvnor/fintech-demo",
     deployment: "https://fintech-demo.vercel.app/",
   },
@@ -153,7 +155,7 @@ Additionally, administrative functions of the NFT contract are gated behind a mu
       { name: "Framer Motion", link: "https://www.framer.com/motion/" },
     ],
     image: "/gamefi_banner.png",
-    description: ``,
+    description: `A fully responsive modern website of a fictional Web3 GameFi startup, complete with animations and high-quality custom assets.`,
     sourceCode: "https://github.com/0xGuvnor/gamefi-demo",
     deployment: "https://metaverse-project-demo.vercel.app",
   },
@@ -169,7 +171,7 @@ Additionally, administrative functions of the NFT contract are gated behind a mu
       { name: "Sanity", link: "https://www.sanity.io/" },
     ],
     image: "/uniswap_banner.avif",
-    description: ``,
+    description: `A clone of the Uniswap UI. Functionality is limited to sending Rinkeby Ether to other wallets in the UI.`,
     sourceCode: {
       frontend: "https://github.com/0xGuvnor/uniswap-demo-client",
       backend: "https://github.com/0xGuvnor/uniswap-demo-backend",

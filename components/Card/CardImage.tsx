@@ -8,7 +8,7 @@ interface Props {
 
 const CardImage = ({ open, image, alt }: Props) => {
   return open ? (
-    <div className="absolute top-0 left-0 w-full h-96 -z-10">
+    <div className="absolute top-0 left-0 w-full h-96 -z-10 bg-neutral">
       <Image
         src={image}
         alt={alt}
