@@ -171,7 +171,9 @@ This app allows users to create posts and authenticated users are able to commen
       { name: "Sanity", link: "https://www.sanity.io/" },
     ],
     image: "/uniswap_banner.avif",
-    description: `A clone of the Uniswap UI. Functionality is limited to sending Rinkeby Ether to other wallets in the UI.`,
+    description: `A clone of the Uniswap UI. 
+    
+Functionality is limited to sending Rinkeby Ether to other wallets in the UI.`,
     sourceCode: {
       frontend: "https://github.com/0xGuvnor/uniswap-demo-client",
       backend: "https://github.com/0xGuvnor/uniswap-demo-backend",
