@@ -48,26 +48,28 @@ const SourceCodeLink = ({ sourceCode }: Props) => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
-            className="absolute -left-1.5 sm:-left-2.5 top-6 sm:top-7 grid grid-cols-2 divide-x divide-secondary w-36 sm:w-44"
+            className="absolute flex space-x-2 sm:space-x-3"
           >
             <div className="flex flex-col group">
               <a
                 href={sourceCode.frontend}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="self-center text-primary"
+                className="text-primary"
               >
                 Frontend
               </a>
               <div className="h-[1.5px] bg-base-content scale-0 group-hover:bg-primary group-hover:scale-100 origin-left transition duration-500 ease-in-out rounded-full"></div>
             </div>
 
+            <div className="text-secondary">|</div>
+
             <div className="flex flex-col group">
               <a
                 href={sourceCode.backend}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="self-center text-primary"
+                className="text-primary"
               >
                 Backend
               </a>
