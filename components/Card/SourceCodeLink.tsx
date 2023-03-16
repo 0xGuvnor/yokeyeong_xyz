@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import { HiOutlineExternalLink } from "react-icons/hi";
 import { IoIosArrowUp } from "react-icons/io";
 
 interface Props {
@@ -20,9 +21,9 @@ const SourceCodeLink = ({ sourceCode }: Props) => {
         href={sourceCode}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-primary"
+        className="flex items-center text-primary"
       >
-        Source Code
+        Source Code <HiOutlineExternalLink className="ml-1" />
       </a>
       <div className="h-[1.5px] bg-base-content scale-0 group-hover:bg-primary group-hover:scale-100 origin-left transition duration-500 ease-in-out rounded-full"></div>
     </div>
@@ -55,9 +56,9 @@ const SourceCodeLink = ({ sourceCode }: Props) => {
                 href={sourceCode.frontend}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary"
+                className="flex items-center text-primary"
               >
-                Frontend
+                Frontend <HiOutlineExternalLink className="ml-1" />
               </a>
               <div className="h-[1.5px] bg-base-content scale-0 group-hover:bg-primary group-hover:scale-100 origin-left transition duration-500 ease-in-out rounded-full"></div>
             </div>
@@ -69,9 +70,9 @@ const SourceCodeLink = ({ sourceCode }: Props) => {
                 href={sourceCode.backend}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary"
+                className="flex items-center text-primary"
               >
-                Backend
+                Backend <HiOutlineExternalLink className="ml-1" />
               </a>
               <div className="h-[1.5px] bg-base-content scale-0 group-hover:bg-primary group-hover:scale-100 origin-left transition duration-500 ease-in-out rounded-full"></div>
             </div>

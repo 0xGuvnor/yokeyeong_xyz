@@ -8,6 +8,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import CardImage from "./CardImage";
 import { useRouter } from "next/router";
 import SourceCodeLink from "./SourceCodeLink";
+import { HiOutlineExternalLink } from "react-icons/hi";
 
 const Card = ({
   id,
@@ -100,9 +101,9 @@ const Card = ({
                   href={deployment}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary"
+                  className="flex items-center text-primary"
                 >
-                  Deployment
+                  Deployment <HiOutlineExternalLink className="ml-1" />
                 </a>
                 <div className="h-[1.5px] bg-base-content scale-0 group-hover:scale-100 group-hover:bg-primary origin-left transition duration-500 ease-in-out rounded-full"></div>
               </div>
