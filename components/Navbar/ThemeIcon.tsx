@@ -21,7 +21,7 @@ const ThemeIcon = () => {
   useEffect(() => {
     // Sets the theme variable for first time visitors
     if (!localStorage.getItem("theme")) {
-      setTheme("light");
+      setTheme("dark");
     }
   }, []);
 
